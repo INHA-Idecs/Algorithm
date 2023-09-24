@@ -46,11 +46,9 @@ git commit -m "커밋메세지(아이디 등 + 문제번호 + solve)"
 git push origin "브랜치명"
 # git push origin seaniiio
 ```
-fatal: The current branch seaniiio has no upstream branch. 이런 에러가 뜨면 원격 저장소에 대한 기본 브랜치 설정을 해야합니다!
-```
-git push --set-upstream origin main
-```
+
 6. 문제를 모두 풀었으면 main 브랜치로 PR을 날리고 merge한다.
+
 
 
 ### ❗️규칙
