@@ -10,6 +10,13 @@ git clone 'https://github.com/INHA-Idecs/Algorithm.git'
 2. 생성된 원격 저장소에 자신의 소스코드를 올릴 폴더를 생성한다. (ex. '/seaniiio' )
 - 자신의 폴더 아래에 PGS 폴더 만들고 거기서 진행
 - /seaniiio/PGS
+
+3. 폴더에 일단 아무 파일이나 생성하고 커밋 후 push한다.
+```
+git add .
+git commit -m "seaniiio(자신의 폴더명) 폴더 생성"
+git push origin
+```
 3. 개인 작업 진행을 위해 개인 branch를 판다.
 ```
 git branch 자신의 브랜치명
@@ -33,6 +40,10 @@ git commit -m "커밋메세지(아이디 등 + 문제번호 + solve)"
 ```
 git push origin "브랜치명"
 # git push origin seaniiio
+```
+fatal: The current branch seaniiio has no upstream branch. 이런 에러가 뜨면 원격 저장소에 대한 기본 브랜치 설정을 해야합니다!
+```
+git push --set-upstream origin main
 ```
 5. 문제를 모두 풀었으면 main 브랜치로 PR을 날리고 merge한다.
 
