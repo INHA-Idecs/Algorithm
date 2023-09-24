@@ -11,7 +11,7 @@ git clone 'https://github.com/INHA-Idecs/Algorithm.git'
 - 자신의 폴더 아래에 PGS 폴더 만들고 거기서 진행
 - /seaniiio/PGS
 
-3. 폴더에 일단 아무 파일이나 생성하고 커밋 후 push한다.
+3. 폴더에 일단 **아무 파일이나 생성하고** 커밋 후 push한다.
 ```
 git add .
 git commit -m "seaniiio(자신의 폴더명) 폴더 생성"
@@ -48,8 +48,11 @@ git push origin "브랜치명"
 ```
 
 6. 문제를 모두 풀었으면 main 브랜치로 PR을 날리고 merge한다.
+![image](https://github.com/INHA-Idecs/Algorithm/assets/121426422/ce14aa2e-3e29-4dc7-befe-297161f5e751)  
 
+![image](https://github.com/INHA-Idecs/Algorithm/assets/121426422/b1d9d188-dbdd-4db5-a434-ebc5c752bdc3)  
 
+![image](https://github.com/INHA-Idecs/Algorithm/assets/121426422/ec6457ea-34c1-421e-891a-7bcdfa156720)  
 
 ### ❗️규칙
 - 일주일에 4문제씩 주제에 맞춰 모두 풀어온다.
