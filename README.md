@@ -37,8 +37,9 @@ git status
 git add 파일명
 ```
 - 커밋한다
+  (커밋 메세지는 자유롭게)
 ```
-git commit -m "커밋메세지(아이디 등 + 문제번호 + solve)"
+git commit -m "커밋메세지(아이디 등 + 문제번호 or 문제이름 + solve)"
 # git commit -m "seaniiio 2512 solve"
 ```
 - push한다
