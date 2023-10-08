@@ -10,3 +10,4 @@ def solution(s):
             stk.append(c)
     if len(stk) != 0 : answer = False
     return answer
+
