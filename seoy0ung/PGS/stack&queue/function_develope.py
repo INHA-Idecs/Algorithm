@@ -8,23 +8,23 @@
 
 def solution(progresses, speeds):
     answer = []
-    cnt = 0
-    while progresses:
+    cnt = 0  # 함께 배포가능한 기능 수 기록
+    while progresses:  # 작업중인 기능이 있는 동안 실행
         for i in range(len(progresses)):
-            progresses[i] += speeds[i]
+            progresses[i] += speeds[i]  # 각 진도에 속도만큼 더해주기
         while progresses:
-            check = progresses.pop(0)
-            speed = speeds.pop(0)
-            if check >= 100:
-                cnt += 1
+            check = progresses.pop(0)  # 현재 기능
+            speed = speeds.pop(0)  # 현재 작업속도
+            if check >= 100:  # 완료된 작업이면
+                cnt += 1  # 배포가능 기능 수 추가
                 continue
-            else:
-                if cnt != 0:
-                    answer.append(cnt)
-                progresses.insert(0,check)
+            else:  # 완료되지 않았다면
+                if cnt != 0:  # 배포가능한 기능이 있다면
+                    answer.append(cnt)  # 배포
+                progresses.insert(0,check)  # 다시 작업중인 목록 맨 앞에 추가
                 speeds.insert(0, speed)
-                cnt = 0
+                cnt = 0  # 초기화
                 break
-        if cnt != 0:
+        if cnt != 0:  # 전체를 다 돌았는데 초기화 안된 상태면 마지막에 추가
             answer.append(cnt)
     return answer
