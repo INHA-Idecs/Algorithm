@@ -10,16 +10,17 @@ def solution(priorities, location):
     answer = 1
     q = deque(priorities)
     while len(q) != 0:
-        if max(q) > q[0]: # 뒤에 우선순위 높은게 있음
-            q.append(q.popleft())
-            if location == 0: # 알고싶은 프로세스 차례인 경우
-                location = len(q) - 1
-            else: # 알고싶은 프로세스 차례가 아닌 경우
-                location = location - 1
-        else: # 뒤에 우선순위 높은게 없음
+        if  max(q) <= q[0]: # 뒤에 우선순위 높은게 없음
             if location == 0:
                 return answer
             q.popleft()
             answer = answer + 1
             location = location - 1
+        else: # 뒤에 우선순위 높은게 있음
+            q.append(q.popleft())
+            if location == 0: # 알고싶은 프로세스 차례인 경우
+                location = len(q) - 1
+            else: # 알고싶은 프로세스 차례가 아닌 경우
+                location = location - 1
+
     return answer
