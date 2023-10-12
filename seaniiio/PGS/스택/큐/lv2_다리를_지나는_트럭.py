@@ -1,3 +1,9 @@
+'''
+- 모든 트럭이 다리를 건너는 시간 구하기
+- 다리에는 올라갈 수 있는 최대 무게와 다리의 length 존재
+'''
+
+
 from collections import deque
 
 def solution(bridge_length, weight, truck_weights):
