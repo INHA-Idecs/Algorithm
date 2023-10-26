@@ -1,6 +1,5 @@
 def solution(numbers):
     answer = ''
-    tens = []
     num_str = list(map(str, numbers))
     num_str.sort(key=lambda num: num * 3, reverse=True)
 
