@@ -21,6 +21,9 @@ def solution(money):
             break
         dp_o[i] = max(dp_o[i-1], dp_o[i-2] + money[i])
         dp_x[i] = max(dp_x[i-1], dp_x[i-2] + money[i])
+        # 점화식이 왜 이렇게?
+        # 이전 집을 털었을 때, 현재 집은 털지 못함. 이 경우는 dp[i-1]
+        # 전전 집을 털고 이전 집을 털지 않았을 때, 현재 집을 털 수 있음. 이 경우는 dp[i-2] + money[i]
     return max(dp_o[len(money) - 1], dp_x[len(money) - 1])
 
 
